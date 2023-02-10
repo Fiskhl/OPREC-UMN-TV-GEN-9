@@ -24,28 +24,6 @@ hamburger.addEventListener("click", function () {
   navMenu.classList.toggle("hidden");
 });
 
-//Mail JS
-(function () {
-  emailjs.init("_2AoIBFssiqefbJe8");
-})();
-
-function SendMail() {
-  var params = {
-    from_name: document.getElementById("name").value,
-    from_email: document.getElementById("email").value,
-    subject_email: document.getElementById("subject").value,
-    message: document.getElementById("message").value,
-  };
-  emailjs.send("service_vstlp4f", "template_vbhatad", params).then(
-    function (res) {
-      alert("Your message has been Sent!");
-    },
-    function (error) {
-      alert("FAILED...", error);
-    }
-  );
-}
-
 //Click outside Hamburger
 window.addEventListener("click", function (e) {
   if (e.target != hamburger && e.target != navMenu) {
